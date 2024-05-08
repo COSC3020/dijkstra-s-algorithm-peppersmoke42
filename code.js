@@ -1,11 +1,12 @@
-// It has now been 8 and hours since I started trying to learn how 
-// to use automated testing cases through the use of jsverify
-// and have learned two things:
-//    -It confuses me
-//    -It makes me want to cry
-// For the sake of my own sanity I'm going to stop attempting it
-//
-// It do be bedtime, after all
+// Credit goes to ChatGPT
+//    -It created the test cases used in this program
+//    -It also explained why the provided algorithm worked
+//        -I actually knew dijkstra's prior to this class but had issues
+//         understanding your implementation of it
+//        -So ChatGPT walked me through your algorithm, line by line,
+//         to see how the recursive calls worked and how an answer was
+//         sent back
+
 
 /*
 * Implements djikstra's algorithm based off the provided formula (listed below)
@@ -52,7 +53,7 @@ function dijkstra(graph, source) {
         for (const neighbor in graph[v]) {
             const weight = graph[v][neighbor];
             const newDist = dist[v] + weight;
-            dist[neighbor] = dist[neighbor]//Math.min(dist[neighbor], newDist);
+            dist[neighbor] = Math.min(dist[neighbor], newDist);
         }
     }
     return dist;
